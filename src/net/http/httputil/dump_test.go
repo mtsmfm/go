@@ -163,6 +163,7 @@ var dumpTests = []dumpTest{
 		},
 		NoBody: true,
 		WantDump: "GET http://foo.com/ HTTP/1.1\r\n" +
+			"Host: foo.com\r\n" +
 			"User-Agent: blah\r\n\r\n",
 	},
 
