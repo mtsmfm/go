@@ -14,7 +14,7 @@ import (
 	"log"
 	"net"
 	"net/http"
-	"net/http/internal/testcert"
+	"github.com/mtsmfm/go/src/net/http/internal/testcert"
 	"os"
 	"strings"
 	"sync"

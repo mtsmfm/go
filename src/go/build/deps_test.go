@@ -458,7 +458,7 @@ var depsRules = `
 
 	FMT
 	< golang.org/x/net/http2/hpack
-	< net/http/internal, net/http/internal/ascii, net/http/internal/testcert;
+	< github.com/mtsmfm/go/src/net/http/internal, github.com/mtsmfm/go/src/net/http/internal/ascii, github.com/mtsmfm/go/src/net/http/internal/testcert;
 
 	FMT, NET, container/list, encoding/binary, log
 	< golang.org/x/text/transform
@@ -475,9 +475,9 @@ var depsRules = `
 	golang.org/x/net/http/httpguts,
 	golang.org/x/net/http/httpproxy,
 	golang.org/x/net/http2/hpack,
-	net/http/internal,
-	net/http/internal/ascii,
-	net/http/internal/testcert,
+	github.com/mtsmfm/go/src/net/http/internal,
+	github.com/mtsmfm/go/src/net/http/internal/ascii,
+	github.com/mtsmfm/go/src/net/http/internal/testcert,
 	net/http/httptrace,
 	mime/multipart,
 	log
@@ -488,7 +488,7 @@ var depsRules = `
 	encoding/json, net/http
 	< expvar;
 
-	net/http, net/http/internal/ascii
+	net/http, github.com/mtsmfm/go/src/net/http/internal/ascii
 	< net/http/cookiejar, net/http/httputil;
 
 	net/http, flag

@@ -173,9 +173,9 @@ func TestSkipInternal(t *testing.T) {
 		want bool
 	}{
 		{"net/http", true},
-		{"net/http/internal-foo", true},
-		{"net/http/internal", false},
-		{"net/http/internal/bar", false},
+		{"github.com/mtsmfm/go/src/net/http/internal-foo", true},
+		{"github.com/mtsmfm/go/src/net/http/internal", false},
+		{"github.com/mtsmfm/go/src/net/http/internal/bar", false},
 		{"internal/foo", false},
 		{"internal", false},
 	}

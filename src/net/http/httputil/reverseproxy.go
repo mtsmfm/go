@@ -16,7 +16,7 @@ import (
 	"net"
 	"net/http"
 	"net/http/httptrace"
-	"net/http/internal/ascii"
+	"github.com/mtsmfm/go/src/net/http/internal/ascii"
 	"net/textproto"
 	"net/url"
 	"strings"
