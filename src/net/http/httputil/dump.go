@@ -243,15 +243,12 @@ func DumpRequest(req *http.Request, body bool) ([]byte, error) {
 	fmt.Fprintf(&b, "%s %s HTTP/%d.%d\r\n", valueOrDefault(req.Method, "GET"),
 		reqURI, req.ProtoMajor, req.ProtoMinor)
 
-	absRequestURI := strings.HasPrefix(req.RequestURI, "http://") || strings.HasPrefix(req.RequestURI, "https://")
-	if !absRequestURI {
-		host := req.Host
-		if host == "" && req.URL != nil {
-			host = req.URL.Host
-		}
-		if host != "" {
-			fmt.Fprintf(&b, "Host: %s\r\n", host)
-		}
+	host := req.Host
+	if host == "" && req.URL != nil {
+		host = req.URL.Host
+	}
+	if host != "" {
+		fmt.Fprintf(&b, "Host: %s\r\n", host)
 	}
 
 	chunked := len(req.TransferEncoding) > 0 && req.TransferEncoding[0] == "chunked"
